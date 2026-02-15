@@ -36,12 +36,12 @@ const AboutMe = () => {
             <p>
               I'm a passionate{" "}
               <span className="font-semibold text-[#64ffda]">
-                Front End Developer
+                AI MERN Stack Developer
               </span>{" "}
               with expertise in modern web technologies. I love creating
               efficient, scalable, and user-friendly applications that solve
               real-world problems. With a strong foundation in front-end and a
-              little bit of back-end development, I strive to deliver
+              back-end development, I strive to deliver
               high-quality solutions that exceed expectations.
             </p>
 

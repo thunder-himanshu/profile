@@ -35,7 +35,7 @@ function Intro() {
               I build things for the Web/Mobile
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300 font-poppins">
-              Front End Developer | Software Engineer
+              AI MERN Stack Developer | Software Engineer
             </p>
             <button
               type="button"

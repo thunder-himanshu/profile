@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      import.meta.env.EMAIL_SERVICE_ID,      // Your Service ID
+      import.meta.env.EMAIL_TEMPLATE_ID,     // Your Template ID
+      form.current,
+      import.meta.env.EMAIL_PUBLIC_KEY      // Your Public Key
+    ).then(
+      () => {
+        alert('Message sent successfully! ✅');
+        e.target.reset(); // Clear the form after successful send
+      },
+      (error) => {
+        alert('Failed to send. Please try again.');
+        console.error('Error:', error);
+      }
+    );
+  };
+
   return (
     <section className="relative min-h-screen py-16 px-6 bg-transparent overflow-hidden">
       {/* Background Gradient Shape */}
@@ -75,44 +98,54 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-[#64ffda]/30 hover:border-[#64ffda] transition">
-            <form className="space-y-6">
-              {/* Name */}
+            <form 
+              ref={form}
+              onSubmit={sendEmail}
+              className="space-y-6"
+            >
+              {/* Name Field */}
               <div>
                 <label className="block text-left text-blue-200 mb-2 font-poppins">
                   Name
                 </label>
                 <input
                   type="text"
+                  name="from_name"
                   placeholder="Enter your name"
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-blue-100 border border-gray-600 focus:ring-2 focus:ring-[#64ffda] outline-none"
                 />
               </div>
 
-              {/* Email */}
+              {/* Email Field */}
               <div>
                 <label className="block text-left text-blue-200 mb-2 font-poppins">
                   Email
                 </label>
                 <input
                   type="email"
+                  name="from_email"
                   placeholder="Enter your email"
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-blue-100 border border-gray-600 focus:ring-2 focus:ring-[#64ffda] outline-none"
                 />
               </div>
 
-              {/* Message */}
+              {/* Message Field */}
               <div>
                 <label className="block text-left text-blue-200 mb-2 font-poppins">
                   Message
                 </label>
                 <textarea
+                  name="message"
                   rows="5"
                   placeholder="Write your message..."
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-blue-100 border border-gray-600 focus:ring-2 focus:ring-[#64ffda] outline-none"
                 ></textarea>
               </div>
 
-              {/* Button */}
+              {/* Submit Button */}
               <button
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-[#64ffda] text-[#64ffda] font-semibold font-poppins hover:bg-[#64ffda]/10 transition"
@@ -121,23 +154,26 @@ const Contact = () => {
               </button>
             </form>
             
+            <p className="text-xs text-blue-300/70 mt-4 text-center">
+              ✓ Messages sent securely via EmailJS
+            </p>
           </div>
-          
         </div>
+        
+        {/* Background shape */}
+        <div
+          aria-hidden="true"
+          className="absolute top-0 left-1/2 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+        >
           <div
-    aria-hidden="true"
-    className="absolute top-0 left-1/2 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
-  >
-    <div
-      style={{
-        clipPath:
-          "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-      }}
-      className="aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-    />
-  </div>
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+            }}
+            className="aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          />
+        </div>
       </div>
-      
     </section>
   );
 };

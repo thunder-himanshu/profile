@@ -6,6 +6,7 @@ import Intro from './component/intro';
 import AboutMe from './component/AboutMe';
 import Projects from './component/Projects';
 import Contact from './component/Contact';
+import Chatbot from './component/Chatbot';
 
 function App() {
   // Create a ref for the canvas
@@ -42,6 +43,7 @@ function App() {
           <Contact/>
         </section>
       </div>
+      <Chatbot />
     </div>
   );
 }
