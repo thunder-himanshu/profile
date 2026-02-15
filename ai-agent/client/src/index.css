@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5048e5;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #0F172A;
+  --color-accent-cyan: #22D3EE;
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-bg: rgba(15, 23, 42, 0.6);
+  --color-glass-highlight: rgba(255, 255, 255, 0.03);
+
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --animate-pulse-node: pulse-node 2s infinite;
+  
+  @keyframes pulse-node {
+    0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+  }
+
+  @keyframes earth-light-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+  }
+}
+
+body {
+  @apply bg-gray-100 text-gray-900;
+}
+
+/* Custom Utilities for Glassmorphism & Animations */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-bubble-ai {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-input {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Neural Network Background Pattern */
+.neural-bg {
+    background-color: #0F172A;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(80, 72, 229, 0.2) 0px, transparent 50%);
+}
+
+.grid-lines {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

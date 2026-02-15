@@ -1,0 +1,30 @@
+{
+  "screenshot": {
+    "name": "projects/7192257764587813209/files/b325c4c85a7e45e8ae684337f1815fcb",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW9rRy3B10zoh8mT281jaVWuIrARkjZsZDQkaOU56StxE49Qesp3MUspn2_7GH95Mr_jI0sgZG_8KqXdN4ZQ-NjqcTdmLYvxQAPSr0sXI1YKKccpAlqe-2V8uWlkVCz7OiT28E4ZQFElmfWluqW002C-tK6NOtEljBHg_Wx3JmZT7OKNCS538LJuZZ9-6lptT48u2A6UWoRQgCief0gKgCAFa2dtbswpwMEu5BTNgGid373TUontDzKrLA"
+  },
+  "htmlCode": {
+    "name": "projects/7192257764587813209/files/0bd5da5b5ccd423cafd1dd41613727ba",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Y0ODhjNjkxNDQxYjQzYWY4ZjBmY2ZmMmEyNTc2ZGM2EgsSBxDO_vS7rQUYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTkyMjU3NzY0NTg3ODEzMjA5&filename=&opi=89354086"
+  },
+  "id": "ad40d2ce2c564aebaabcd1b55fffc0a0",
+  "generatedBy": "figaro_agent",
+  "width": "780",
+  "height": "1768",
+  "title": "AI Memory Agent Chat",
+  "prompt": "Title: AI Memory Agent Chat\nContext: AI Agent with Memory: A futuristic, immersive chat interface featuring a memory network visualization.\nDescription of the screen: A modern, immersive AI chat interface titled 'AI Agent with Memory'. The background is a deep navy (#0F172A) with a dynamic teal-to-indigo gradient and faint, glowing neural network connection lines. The main chat area is a glassmorphic container with a soft glow and 20px rounded corners. User messages are gradient bubbles (#4F46E5 to indigo) with a subtle glow and a slight wave shape. AI messages have a soft translucent background with modern typography (Space Grotesk). On the right side, there's a 'Memory Nodes' panel showing small glowing dots connected by lines, representing saved context, with one node highlighted to show active memory. The input bar at the bottom is a floating glass element with a neon cyan (#22D3EE) send button and a subtle pulse animation for typing. The overall vibe is premium, dark-themed, and futuristic.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/7192257764587813209/screens/ad40d2ce2c564aebaabcd1b55fffc0a0",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "SPACE_GROTESK",
+    "roundness": "ROUND_FULL",
+    "customColor": "#5048e5",
+    "saturation": 3
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  }
+}
